@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Girişi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+        .container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>İlk şifre biraz basit ama git gide zorlaşıcak seni ilk kez gerçekten öptügüm günün tarihi??</h2>
+        <input type="password" id="password" placeholder="Şifreyi gir...">
+        <br>
+        <button onclick="checkPassword()">Devam Et</button>
+        <br>
+        <button onclick="showHint()">İpucu = 10 hak</button>
+        <p id="hint" style="display: none; font-weight: bold; color: red;">ABLA PARA</p>
+    </div>
+    
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "29.05.2023") {
+                window.location.href = "next.html";
+            } else {
+                alert("Yanlış şifre! Tekrar dene.");
+            }
+        }
+
+        function showHint() {
+            document.getElementById("hint").style.display = "block";
+        }
+    </script>
+</body>
+</html>
